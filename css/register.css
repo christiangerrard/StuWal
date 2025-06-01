@@ -1,0 +1,217 @@
+/* ======================================
+   css/register.css (Versi Revisi #2)
+   ====================================== */
+
+/* 1) WRAPPER SPLIT-SCREEN */
+.register-page {
+  display: flex;
+  height: 100vh;
+}
+
+/* 1a) Bagian Kiri: Ilustrasi */
+/* Ubah flex:0.4 → 0.45 (sekitar 45% layar) */
+.register-left {
+  flex: 0.45;
+  background-color: var(--color-warning-normal); /* #F7A100 */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-left img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+/* 1b) Bagian Kanan: Form */
+/* Ubah flex:0.6 → 0.55 (sekitar 55% layar) */
+.register-right {
+  flex: 0.55;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* 2) FORM CARD */
+.form-card {
+  background-color: #FFFFFF;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-medium);
+
+  /* Tambah padding-horizontal agar input tidak terlalu mepet */
+  /* Sebelumnya: padding: 2rem 1.75rem 2.5rem 1.75rem; */
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  position: relative;
+}
+
+/* 3) LOGO DAN JUDUL */
+.form-card .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.form-card .logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.form-card h1 {
+  /* Tetap 1.5rem, sesuai revisi sebelumnya */
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* 4) STYLING FIELD */
+/* Tambahkan CSS ini ke file register.css yang sudah ada */
+
+/* TOGGLE PASSWORD BUTTON */
+.toggle-password-btn {
+    position: absolute;
+    right: 0.75rem;
+    top: 2.2rem;
+    background: transparent;
+    border: none;
+    color: var(--color-secondary-active);
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease-in-out;
+}
+
+.toggle-password-btn:hover {
+    color: var(--color-primary-dark);
+}
+
+.toggle-password-btn:focus {
+    outline: none;
+}
+
+/* Update existing input styling to ensure proper spacing */
+.form-group input {
+    width: 100%;
+    background-color: var(--color-neutral-200);
+    transition: background-color 0.2s ease-in-out;
+    padding: 0.65rem 2.5rem 0.65rem 0.9rem; /* padding-right untuk ruang icon */
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    font-family: 'Gilroy Regular', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  position: relative; /* supaya .toggle-password-btn absolutnya mengacu pada form-group */
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+
+/* 5) TOMBOL "CREATE ACCOUNT" */
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background-color: var(--color-primary-active); /* #F5C400 */
+  color: var(--text-on-primary);                 /* #FFFFFF */
+  font-size: 0.95rem;
+  font-family: 'Gilroy Bold', sans-serif;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 0.75rem;
+  transition: background-color 0.2s ease-in-out,
+              transform 0.1s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-primary-hover); /* #FFE780 */
+}
+
+.btn-submit:active {
+  background-color: var(--color-primary-dark); /* #D6A800 */
+  transform: scale(0.98);
+}
+
+/* 6) LINK LOGIN */
+.login-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.login-link a {
+  color: var(--color-primary-active);
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+.login-link a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* 7) RESPONSIVE (stack vertikal di layar sempit) */
+@media (max-width: 1024px) {
+  .register-page {
+    flex-direction: column;
+  }
+  .register-left,
+  .register-right {
+    width: 100%;
+    height: 50vh;
+  }
+  .register-left {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .register-right {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .form-card {
+    margin: 0 1rem;
+    /* Agar di mobile, padding card menyesuaikan */
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+  }
+}
+
+/* 8) Efek input-error (tetap) */
+.input-error {
+  border-color: var(--color-error-normal) !important;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-5px); }
+  50%  { transform: translateX(5px); }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.form-group.focused input {
+  box-shadow: 0 0 0 3px rgba(16, 42, 113, 0.15);
+  border-color: var(--color-secondary-active);
+}
+
+

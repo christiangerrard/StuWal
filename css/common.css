@@ -1,0 +1,150 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Gilroy Regular', sans-serif;
+  background-color: #FFFFFF;
+  color: #1F1F1F; /* warna teks netral gelap */
+}
+
+/* 2) FONT-FACE GILROY */
+@font-face {
+  font-family: 'Gilroy Regular';
+  src: url('../assets/fonts/Gilroy-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy Bold';
+  src: url('../assets/fonts/Gilroy-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 3) VARIABEL WARNA (dari Colors.png) */
+:root {
+  /* PRIMARY (Shakespeare) */
+  --color-primary-light:   #FFF7D9;  /* maybe untuk background local */
+  --color-primary-hover:   #FFE780;
+  --color-primary-active:  #F5C400;  /* tombol utama normal */
+  --color-primary-dark:    #D6A800;
+  --color-primary-darker:  #805000;
+
+  /* SECONDARY (Shakespeare) */
+  --color-secondary-light:  #E6EAF3;
+  --color-secondary-hover:  #B3C4E3;
+  --color-secondary-active: #102A71;  /* teks tombol, judul, dsb */
+  --color-secondary-dark:   #001840;
+  --color-secondary-darker: #00081C;
+
+  /* NEUTRAL (Netral) */
+  --color-neutral-100:  #FFFD F0;
+  --color-neutral-200:  #F5F3E5;
+  --color-neutral-300:  #EDE9D9;
+  --color-neutral-400:  #D6D3C2;
+  --color-neutral-500:  #BDB9A8;
+  --color-neutral-600:  #A29E8C;
+  --color-neutral-700:  #7C7869;
+  --color-neutral-800:  #575345;
+  --color-neutral-900:  #3D3A30;
+  --color-neutral-1000: #1F1D18;
+
+  /* SEMANTIC */
+  /* Success (Hijau) */
+  --color-success-normal:       #00A678;
+  --color-success-hover:        #007A56;
+  --color-success-dark:         #00564A;
+  --color-success-darker:       #002E22;
+  /* Error / Deleted (Merah) */
+  --color-error-normal:         #E63946;
+  --color-error-hover:          #B32E39;
+  --color-error-dark:           #991A29;
+  --color-error-darker:         #5C1019;
+  /* Warning / Star (Kuning) */
+  --color-warning-normal:       #F7A100;
+  --color-warning-hover:        #DB8600;
+  --color-warning-dark:         #B36D00;
+  --color-warning-darker:       #643000;
+
+  /* TEXT COLORS */
+  --text-primary:           var(--color-neutral-1000);
+  --text-secondary:         var(--color-secondary-active);
+  --text-on-primary:        #FFFFFF;
+  --text-on-secondary:      #FFFFFF;
+
+  /* BORDER / LINE */
+  --border-light:           var(--color-neutral-300);
+  --border-dark:            var(--color-neutral-700);
+
+  /* SHADOWS */
+  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 4) UTILITIES GLOBAL (font-size, link reset, dll) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gilroy Bold', sans-serif;
+  color: var(--text-secondary);
+}
+p, span, label {
+  font-family: 'Gilroy Regular', sans-serif;
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: 'Gilroy Bold', sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: 'Gilroy Regular', sans-serif;
+  outline: none;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: #F5F5F5;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-secondary-active);
+  box-shadow: 0 0 0 3px rgba(16, 42, 113, 0.2);
+}
+
+/* 5) KONTEN GLOBAAL UNTUK LAYOUT */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* MEDIA QUERY SEDERHANA */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}

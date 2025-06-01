@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | StuWal</title>
+    <!-- CSS GLOBAL & KHUSUS -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo-stuwal.png" type="image/png" />
+</head>
+<body>
+    <div class="register-page">
+        <!-- BAGIAN KIRI: ILUSTRASI -->
+        <div class="register-left">
+            <img src="../assets/images/illustration-register.png" alt="Ilustrasi pendaftaran" />
+        </div>
+
+        <!-- BAGIAN KANAN: FORM REGISTRASI -->
+        <div class="register-right">
+            <div class="form-card">
+                <!-- Logo StuWal -->
+                <div class="logo">
+                    <img src="../assets/images/logo-stuwal.png" alt="Logo StuWal" />
+                </div>
+
+                <!-- Judul -->
+                <h1>Create your Account</h1>
+
+                <!-- Form -->
+                <form id="form-register">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your Full Name here" />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email here" />
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your Password here" />
+                        <!-- Tombol toggle show/hide password dengan SVG icons -->
+                        <button type="button" id="toggle-password" class="toggle-password-btn" aria-label="Toggle password visibility">
+                            <!-- Ikon EYE (untuk state "password hidden") -->
+                            <svg id="icon-eye" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <!-- Ikon EYE-SLASH (untuk state "password visible") -->
+                            <svg id="icon-eye-slash" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                                <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.16 21.16 0 0 1 5-5"></path>
+                                <path d="M1 1l22 22"></path>
+                                <path d="M10.47 10.47a3 3 0 0 0 4.06 4.06"></path>
+                                <path d="M9.53 5.47A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.16 21.16 0 0 1-2.91 4.84"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Tombol Submit -->
+                    <button type="submit" class="btn-submit">Create Account</button>
+                </form>
+
+                <!-- Link Login -->
+                <p class="login-link">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT GLOBAL & KHUSUS -->
+    <script src="../js/common.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>

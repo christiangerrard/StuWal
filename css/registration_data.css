@@ -1,0 +1,216 @@
+/* ======================================
+   css/registration_data.css
+   ====================================== */
+
+/* 1) WRAPPER SPLIT-SCREEN */
+.registration-page {
+    display: flex;
+    height: 100vh;
+}
+
+/* 1a) Bagian Kiri: Ilustrasi */
+.registration-left {
+    flex: 0.45;
+    background-color: var(--color-warning-normal); /* #F7A100 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-left img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+/* 1b) Bagian Kanan: Form */
+.registration-right {
+    flex: 0.55;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* 2) FORM CARD */
+.form-card {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-medium);
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    position: relative;
+}
+
+/* 3) LOGO DAN JUDUL */
+.form-card .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.form-card .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.form-card h1 {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* 4) STYLING FIELD */
+.form-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.form-group input {
+    width: 100%;
+    background-color: var(--color-neutral-200);
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    font-family: 'Gilroy Regular', sans-serif;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    background-color: #FFFFFF;
+    border-color: var(--color-secondary-active);
+}
+
+.form-group input::placeholder {
+    color: #A0A0A0;
+}
+
+/* 5) TOMBOL "ALL SET UP!" */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background-color: var(--color-primary-active); /* #F5C400 */
+    color: var(--text-on-primary); /* #FFFFFF */
+    font-size: 0.95rem;
+    font-family: 'Gilroy Bold', sans-serif;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: var(--color-primary-hover); /* #FFE780 */
+}
+
+.btn-submit:active {
+    background-color: var(--color-primary-dark); /* #D6A800 */
+    transform: scale(0.98);
+}
+
+/* 6) LINK BACK */
+.back-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.back-link a {
+    color: var(--color-primary-active);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.back-link a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* 7) RESPONSIVE (stack vertikal di layar sempit) */
+@media (max-width: 1024px) {
+    .registration-page {
+        flex-direction: column;
+    }
+    
+    .registration-left,
+    .registration-right {
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .registration-left {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .registration-right {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .form-card {
+        margin: 0 1rem;
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
+    }
+}
+
+/* 8) Efek input-error */
+.input-error {
+    border-color: var(--color-error-normal) !important;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+.form-group.focused input {
+    box-shadow: 0 0 0 3px rgba(16, 42, 113, 0.15);
+    border-color: var(--color-secondary-active);
+}
+
+/* 9) Success state untuk form completion */
+.form-success {
+    border: 2px solid var(--color-success-normal);
+    background-color: rgba(0, 255, 0, 0.05);
+}
+
+.btn-submit:disabled {
+    background-color: #CCCCCC;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-submit:disabled:hover {
+    background-color: #CCCCCC;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Data | StuWal</title>
+    <!-- CSS GLOBAL & KHUSUS -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/registration_data.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo-stuwal.png" type="image/png" />
+</head>
+<body>
+    <div class="registration-page">
+        <!-- BAGIAN KIRI: ILUSTRASI -->
+        <div class="registration-left">
+            <img src="../assets/images/illustration-register.png" alt="Ilustrasi data registrasi" />
+        </div>
+        
+        <!-- BAGIAN KANAN: FORM DATA REGISTRASI -->
+        <div class="registration-right">
+            <div class="form-card">
+                <!-- Logo StuWal -->
+                <div class="logo">
+                    <img src="../assets/images/logo-stuwal.png" alt="Logo StuWal" />
+                </div>
+                
+                <!-- Judul -->
+                <h1>Fill your Detail Account</h1>
+                
+                <!-- Form -->
+                <form id="form-registration-data">
+                    <!-- ID Name -->
+                    <div class="form-group">
+                        <label for="idName">ID Name</label>
+                        <input type="text" id="idName" name="idName" placeholder="Enter your ID Name here" />
+                    </div>
+                    
+                    <!-- University -->
+                    <div class="form-group">
+                        <label for="university">University</label>
+                        <input type="text" id="university" name="university" placeholder="Enter your University" />
+                    </div>
+                    
+                    <!-- Number Phone -->
+                    <div class="form-group">
+                        <label for="phoneNumber">Number Phone</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number here" />
+                    </div>
+                    
+                    <!-- Tombol Submit -->
+                    <button type="submit" class="btn-submit">All set up !</button>
+                </form>
+                
+                <!-- Link back to register -->
+                <p class="back-link">
+                    Need to change account info?
+                    <a href="register.html">Go back</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SCRIPT GLOBAL & KHUSUS -->
+    <script src="../js/common.js"></script>
+    <script src="../js/registration_data.js"></script>
+</body>
+</html>
