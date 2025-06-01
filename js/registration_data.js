@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Data contoh untuk auto-fill
     const sampleData = {
-        idName: 'Aqila Noraihana',
+        idName: 'AqilaNoraihana555',
         university: 'Universitas Brawijaya',
         phoneNumber: '+62 812-3456-7890'
     };
@@ -136,9 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.textContent = '✓ Registration Complete!';
             submitBtn.style.backgroundColor = 'var(--color-success-normal)';
             
-            // Redirect otomatis ke dashboard.html setelah 2 detik
+            
             setTimeout(() => {
-                window.location.href = 'dashboard.html';
+                window.location.href = 'login.html';
             }, 2000);
         }, 1500);
     });

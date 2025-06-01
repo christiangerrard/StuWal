@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login Account | StuWal</title>
+<!-- CSS GLOBAL & KHUSUS -->
+<link rel="stylesheet" href="../css/common.css" />
+<link rel="stylesheet" href="../css/login.css" />
+<!-- Favicon -->
+<link rel="icon" href="../assets/images/logo-stuwal.png" type="image/png" />
+</head>
+<body>
+<div class="login-page">
+<!-- BAGIAN KIRI: ILUSTRASI -->
+<div class="login-left">
+<img src="../assets/images/illustration-login.png" alt="Ilustrasi login" />
+</div>
+<!-- BAGIAN KANAN: FORM LOGIN -->
+<div class="login-right">
+<div class="form-card">
+<!-- Logo StuWal -->
+<div class="logo">
+<img src="../assets/images/logo-stuwal.png" alt="Logo StuWal" />
+<span class="brand-name">StuWal</span>
+</div>
+<!-- Judul -->
+<h1>Login your Account</h1>
+<!-- Form -->
+<form id="form-login">
+<!-- ID Name -->
+<div class="form-group">
+<label for="idName">ID Name</label>
+<input type="text" id="idName" name="idName" placeholder="Enter your ID Name here" />
+</div>
+<!-- Password -->
+<div class="form-group">
+<label for="password">Password</label>
+<div class="password-container">
+<input type="password" id="password" name="password" placeholder="Enter your Password here" />
+<button type="button" class="password-toggle" aria-label="Show password">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+</button>
+</div>
+</div>
+<!-- Forgot Password -->
+<div class="forgot-password-wrapper">
+<a href="#" class="forgot-password">Forgot Password ?</a>
+</div>
+<!-- Tombol Login -->
+<button type="submit" class="btn-submit">Login Account</button>
+</form>
+
+<!-- Link to Register -->
+<p class="register-link">
+Already have an account? 
+<a href="register.html">Log in</a>
+</p>
+</div>
+</div>
+</div>
+<!-- SCRIPT GLOBAL & KHUSUS -->
+<script src="../js/common.js"></script>
+<script src="../js/login.js"></script>
+</body>
+</html>
