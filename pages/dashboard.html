@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - StuWal</title>
+    <link rel="icon" href="/assets/images/logo-stuwal.png" type="image/png" />
+    <!-- Font Gilroy & Font Awesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gilroy:wght@300;400;500;600;
+    800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS khusus dashboard -->
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ================= Sidebar ================= -->
+      <div class="sidebar">
+        <div class="logo">
+          <img src="/assets/images/logo-stuwal.png" alt="logo-icon" />
+          StuWal
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <img
+                class="Dashboard"
+                src="/assets/images/dashboard-active.png"
+                alt=""
+                class="Dashboard"
+              />
+              <i></i>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="payment.html" class="nav-link">
+              <img
+                class="Payment"
+                src="/assets/images/wallet.png"
+                alt=""
+                class="Payment"
+              />
+              <i></i>
+              Payment
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transaction.html" class="nav-link">
+              <img
+                class="Transaction"
+                src="/assets/images/transaction.png"
+                alt=""
+                class="Transaction"
+              />
+              <i></i>
+              Transaction
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="budgeting.html" class="nav-link">
+              <img
+                class="Budgeting"
+                src="/assets/images/budgeting.png"
+                alt=""
+                class="Budgeting"
+              />
+              <i></i>
+              Budgeting
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link">
+              <img
+                class="Profile"
+                src="/assets/images/profile.png"
+                alt=""
+                class="Profile"
+              />
+              <i></i>
+              Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html" class="nav-link">
+              <img
+                class="Setting"
+                src="/assets/images/settings.png"
+                alt=""
+                class="Setting"
+              />
+              <i></i>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- =============== Main Content =============== -->
+      <div class="main-content">
+        <!-- ===== Header ===== -->
+        <div class="header">
+          <button class="notification-btn"><i class="fas fa-bell"></i></button>
+          <div class="user-profile">
+            <span>
+              <strong>Hello Aqila Noraihana</strong><br />
+              <small>aqilanor@student.ub.ac.id</small>
+            </span>
+            <img src="/assets/images/photo.svg" alt="User Photo" />
+          </div>
+        </div>
+        <!-- ===== Top Summary Cards ===== -->
+        <div class="top-summary">
+          <!-- Card 1: Awesome! -->
+          <div class="summary-card card-green">
+            <div class="emoji"></div>
+            <h2>Awesome!</h2>
+          </div>
+          <!-- Card 2: Total Balance -->
+          <div class="summary-card card-white">
+            <div class="summary-title">Total Balance</div>
+            <div class="summary-value">Rp 12.800.000</div>
+            <div class="summary-change">
+              <span class="change-amount">+ Rp 4.150.500</span>
+              <span class="change-percent"
+                >▲51% <i class="fas fa-arrowup"></i
+              ></span>
+            </div>
+          </div>
+          <!-- Card 3: Total Expenses -->
+          <div class="summary-card card-white">
+            <div class="summary-title">Total Expenses</div>
+            <div class="summary-value">Rp 12.200.000</div>
+            <div class="summary-change">
+              <span class="change-amount">+ Rp 4.150.500</span>
+              <span class="change-percent"
+                >▲51% <i class="fas fa-arrowup"></i
+              ></span>
+            </div>
+          </div>
+          <!-- Card 4: Total Income -->
+          <div class="summary-card card-white">
+            <div class="summary-title">Total Income</div>
+            <div class="summary-value">Rp 25.000.000</div>
+            <div class="summary-change">
+              <span class="change-amount">+ Rp 4.150.500</span>
+              <span class="change-percent"
+                >▲51% <i class="fas fa-arrowup"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- /Top Summary Cards -->
+        <!-- ===== Middle Section: Wallet Cards & Recurring ===== -->
+        <div class="middle-section">
+          <!-- Wallet Cards (3 buah) -->
+          <div class="wallet-cards dashboard-wallets">
+            <div class="wallet-card">
+              <div class="wallet-header">
+                <img src="/assets/images/shopeepay.svg" alt="ShopeePay" />
+                <div>
+                  <div class="wallet-name">ShopeePay</div>
+                  <div class="wallet-number">0081234567890</div>
+                </div>
+              </div>
+              <div class="wallet-balance">
+                <span class="balance-amount">Rp 1.000.000</span>
+                <span class="balance-percent">38% of balanced</span>
+              </div>
+              <div class="wallet-footer">
+                <div class="spent-today">You spent Rp 100.000 today</div>
+              </div>
+            </div>
+            <div class="wallet-card">
+              <div class="wallet-header">
+                <img src="/assets/images/gopay.svg" alt="GoPay" />
+                <div>
+                  <div class="wallet-name">GoPay</div>
+                  <div class="wallet-number">0081234567890</div>
+                </div>
+              </div>
+              <div class="wallet-balance">
+                <span class="balance-amount">Rp 1.000.000</span>
+                <span class="balance-percent">38% of balanced</span>
+              </div>
+              <div class="wallet-footer">
+                <div class="spent-today">You spent Rp 100.000 today</div>
+              </div>
+            </div>
+            <div class="wallet-card">
+              <div class="wallet-header">
+                <img src="/assets/images/mandiri.svg" alt="Bank Mandiri" />
+                <div>
+                  <div class="wallet-name">Bank Mandiri</div>
+                  <div class="wallet-number">0081234567890</div>
+                </div>
+              </div>
+              <div class="wallet-balance">
+                <span class="balance-amount">Rp 1.000.000</span>
+                <span class="balance-percent">38% of balanced</span>
+              </div>
+              <div class="wallet-footer">
+                <div class="spent-today">You spent Rp 100.000 today</div>
+              </div>
+            </div>
+          </div>
+          <!-- /Wallet Cards -->
+          <!-- Recurring Transactions Card -->
+          <div class="recurring-card">
+            <div class="recurring-header">
+              <span class="recurring-title">Recurring Transactions</span>
+              <select class="period-selector">
+                <option>This Month</option>
+                <option>Last Month</option>
+                <option>Last Year</option>
+              </select>
+            </div>
+            <div class="recurring-count">7</div>
+            <div class="recurring-label">Recurring Transaction</div>
+            <div class="recurring-grid">
+              <!-- Grid placeholder: 6×5 kotak, beberapa diwarnai kuning -->
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell"></div>
+              <div class="cell filled"></div>
+            </div>
+            <a href="transaction.html" class="btn-see-more">See More</a> 
+          </div>
+          <!-- /Recurring Transactions Card -->
+        </div>
+        <!-- /Middle Section -->
+        <!-- ===== Bottom Section: Expenses Breakdown & Transaction History ===== -->
+        <div class="bottom-section">
+          <div class="expenses-card">
+            <div class="expenses-header">
+              <span>Expenses Breakdown</span>
+              <button class="btn-edit-expenses">Edit</button>
+            </div>
+            <div class="expenses-content">
+              <div class="expenses-legend" id="expenses-legend"></div>
+              <div class="expenses-chart">
+                <canvas id="expenses-pie-chart"></canvas>
+                <div class="chart-center-label">
+                  <span>Total Expenses</span>
+                  <span class="chart-value" id="total-expenses"
+                    >Rp 3.300.000</span
+                  >
+                </div>
+              </div>
+
+              <div id="editModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Edit Expenses</h2>
+                  <form id="editForm">
+                    <label for="category">Kategori:</label>
+                    <input type="text" id="category" name="category" required />
+                    <label for="percentage">Persentase:</label>
+                    <input
+                      type="number"
+                      id="percentage"
+                      name="percentage"
+                      required
+                      min="0"
+                      max="100"
+                    />
+                    <button type="submit">Simpan</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- /Expenses Breakdown Card -->
+          <!-- Transaction History Card -->
+          <div class="history-card">
+            <div class="history-header">
+              <h3>Transaction History</h3>
+              <div class="search-filter">
+                <input type="text" class="search-box" placeholder="Search" />
+                <button class="filter-btn">
+                  <i class="fas fa-filter"></i> Filter
+                </button>
+              </div>
+            </div>
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Wallet</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2:15 PM</td>
+                  <td>
+                    <img
+                      src="/assets/images/bni.svg"
+                      alt="Bank BNI"
+                      class="wallet-icon"
+                    />
+                    Bank BNI
+                  </td>
+                  <td>May 27, 2025</td>
+                  <td class="amount-positive">+ Rp 5.000.000</td>
+                  <td>Salary</td>
+                </tr>
+                <tr>
+                  <td>9:22 PM</td>
+                  <td>
+                    <img
+                      src="/assets/images/gopay.svg"
+                      alt="GoPay"
+                      class="wallet-icon"
+                    />
+                    GoPay
+                  </td>
+                  <td>May 26, 2025</td>
+                  <td class="amount-negative">- Rp 53.000</td>
+                  <td>Food & Drink</td>
+                </tr>
+                <tr>
+                  <td>7:37 PM</td>
+                  <td>
+                    <img
+                      src="/assets/images/spay.svg"
+                      alt="ShopeePay"
+                      class="wallet-icon"
+                    />
+                    ShopeePay
+                  </td>
+                  <td>May 26, 2025</td>
+                  <td class="amount-positive">+ Rp 61.500</td>
+                  <td>Salary</td>
+                </tr>
+                <tr>
+                  <td>12:55 PM</td>
+                  <td>
+                    <img
+                      src="/assets/images/bca.svg"
+                      alt="Bank BCA"
+                      class="wallet-icon"
+                    />
+                    Bank BCA
+                  </td>
+                  <td>May 26, 2025</td>
+                  <td class="amount-positive">+ Rp 5.000.000</td>
+                  <td>Salary</td>
+                </tr>
+                <tr>
+                  <td>3:44 PM</td>
+                  <td>
+                    <img
+                      src="/assets/images/gopay.svg"
+                      alt="GoPay"
+                      class="wallet-icon"
+                    />
+                    GoPay
+                  </td>
+                  <td>May 25, 2025</td>
+                  <td class="amount-negative">- Rp 53.000</td>
+                  <td>Salary</td>
+                </tr>
+                <tr>
+                  <td>11:11 AM</td>
+                  <td>
+                    <img
+                      src="/assets/images/gopay.svg"
+                      alt="GoPay"
+                      class="wallet-icon"
+                    />
+                    GoPay
+                  </td>
+                  <td>May 25, 2025</td>
+                  <td class="amount-negative">- Rp 70.500</td>
+                  <td>Salary</td>
+                </tr>
+                <tr>
+                  <td>8:33 AM</td>
+                  <td>
+                    <img
+                      src="/assets/images/gopay.svg"
+                      alt="GoPay"
+                      class="wallet-icon"
+                    />
+                    GoPay
+                  </td>
+                  <td>May 25, 2025</td>
+                  <td class="amount-negative">- Rp 37.000</td>
+                  <td>Salary</td>
+                </tr>
+                <tr>
+                  <td>5:01 AM</td>
+                  <td>
+                    <img
+                      src="/assets/images/gopay.svg"
+                      alt="GoPay"
+                      class="wallet-icon"
+                    />
+                    GoPay
+                  </td>
+                  <td>May 24, 2025</td>
+                  <td class="amount-negative">- Rp 53.000</td>
+                  <td>Salary</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /Transaction History Card -->
+        </div>
+        <!-- /Bottom Section -->
+      </div>
+      <!-- ============= End Main Content ============= -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>
